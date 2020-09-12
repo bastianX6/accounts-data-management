@@ -9,12 +9,20 @@ import Foundation
 
 /// Structs that contains query elements
 public struct ReadMovementsQuery {
-    let fromDate: Date
-    let toDate: Date
+    /// Starting date
+    public let fromDate: Date
 
-    let storeId: UUID?
-    let categoryId: UUID?
-    let paymentId: UUID?
+    /// Ending date
+    public let toDate: Date
+
+    /// Store id. Used to filter by store
+    public let storeId: UUID?
+
+    /// Category id. Used to filter by category
+    public let categoryId: UUID?
+
+    /// Payment id. Used to filter multi-payment movements
+    public let paymentId: UUID?
 
     /// Default initializer
     /// - Parameters:
