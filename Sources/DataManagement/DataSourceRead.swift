@@ -17,4 +17,12 @@ public protocol DataSourceRead {
     /// Reads a single movement
     /// - Parameter id: the movement id
     func readMovement(id: UUID) -> AnyPublisher<Movement, Error>
+
+    /// Get the sum of movements grouped by category
+    /// - Parameter query: query parameters
+    func getMovementSumByCategory(query: ReadMovementsQuery) -> AnyPublisher<[MovementsSum], Error>
+
+    /// Get the sum of movements grouped by store
+    /// - Parameter query: query parameters
+    func getMovementSumByStore(query: ReadMovementsQuery) -> AnyPublisher<[MovementsSum], Error>
 }
