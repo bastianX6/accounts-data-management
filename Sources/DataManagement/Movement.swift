@@ -27,6 +27,9 @@ public protocol Movement {
     /// Describes if movement is paid or is not
     var isPaid: Bool { get }
 
+    /// Describes if movement is permanent
+    var isPermanent: Bool { get }
+
     /// Store Id. Should be used to clasify movements by store
     var storeId: UUID { get }
 
